@@ -15,6 +15,13 @@
 <body>
   <header>
     <h1>HTML CSS</h1>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>News</li>
+        <li>Q&A</li>
+      </ul>
+    </nav>
   </header>
   <main>
     <section id="intro">
@@ -37,30 +44,44 @@
 
     <section id="style">
       <h2>豊富なスタイル</h2>
-      <img src="./images/AdobeStock_279823582.png" alt="豊富なスタイル">
+          <img id="slide2" src="./images/AdobeStock_279823582.png" alt=""/>
+          <ul>
+            <li><a href="#slide1"></a></li>
+            <li><a href="#slide2"></a></li>
+            <li><a href="#slide3"></a></li>
+          </ul>
     </section>
 
     <section id="news">
       <h2>NEWS</h2>
-      <P>アームストロングのカウチ入荷</p>
-      <p>アームストロングのチェア入荷</p>
-      <p>アームストロングのデスク入荷</p>
+      <section>
+          <img src="./images/AdobeStock_59829158.png" alt="アームストロングのカウチ">
+          <P>アームストロングのカウチ入荷</p>
+      </section>
+      <section>
+          <img src="./images/AdobeStock_74141361.png" alt="アームストロングのチェア">
+          <P>アームストロングのチェア入荷</p>
+      </section>
+      <section>
+          <img src="./images/AdobeStock_221963447.png" alt="アームストロングのデスク">
+          <P>アームストロングのデスク入荷</p>
+      </section>
       <p>view more</p>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>CONTACT</h2>
       <form>
-        <input type="text" size="40" maxlength="20"placeholder="お名前" required>
-        <input type="email" name="email" size="30" maxlength="40" placeholder="メールアドレス" pattern="^[0-9A-Za-z]+$" required>
-        <textarea rows="5" placeholder="お問い合わせ内容"></textarea>
+        <input type="text" maxlength="20" placeholder="お名前" required>
+        <input type="email" name="email" maxlength="40" placeholder="メールアドレス" pattern="^[0-9A-Za-z]+$" required>
+        <textarea placeholder="お問い合わせ内容"></textarea>
         <input type="submit" value="Send">
       </form>
     </section>
 </main>
 <footer>
   <h1>HTML CSS</h1>
-  <p><small>@HTMLCSS.code</small></p>
+  <p>@HTMLCSS.code</p>
 </footer>
 </body>
 </html>

@@ -129,7 +129,7 @@ h2{
   border-radius:50%;
 }
 #style ul li:not(:last-of-type){
-  margin-right:4px;
+  margin-right:0.3125%;
 }
 #style ul li a{
   display:block;

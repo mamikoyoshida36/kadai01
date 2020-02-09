@@ -8,18 +8,26 @@
   <meta name="author" content="mamiko">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <link rel="stylesheet" type="text/css" href="index.css">
-
-  <title>HTML CSS</title>
+  <link rel="stylesheet" href="index.css">
+ <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+JP:100,300,400,500,700|Noto+Serif+JP:400,600&display=swap" rel="stylesheet">
+<title>HTML CSS</title>
+<script>
+  function a(){
+    document.getElementById("#contact").style.display = "none";
+  }
+</script>
 </head>
 <body>
   <header>
     <h1>HTML CSS</h1>
+    <span></span>
+    <span></span>
+    <span></span>
     <nav>
       <ul>
-        <li>About</li>
-        <li>News</li>
-        <li>Q&A</li>
+        <li><a href="#" id="nav1">About</a></li>
+        <li><a href="#news" onclik="a();">News</a></li>
+        <li><a href="" id="nav3">Q&A</a></li>
       </ul>
     </nav>
   </header>
@@ -44,8 +52,9 @@
 
     <section id="style">
       <h2>豊富なスタイル</h2>
-          <img class="slide2 sp" src="./images/AdobeStock_279823582.png" alt="">
-          <img class="slide2 pc" src="./images/AdobeStock_279823582@2x.png" alt="">
+          <img class="slide2" src="./images/AdobeStock_279823582.png" alt=""
+          srcset="./images/AdobeStock_279823582@2x.png 718w, ./images/AdobeStock_279823582.png 359w"
+          sizes="(min-width:768px)718px, 359px">
 
           <ul>
             <li><a href=".slide1"></a></li>
@@ -58,18 +67,21 @@
       <h2>NEWS</h2>
       <div>
         <section>
-            <img class="sp" src="./images/AdobeStock_59829158.png" alt="アームストロングのカウチ">
-            <img class="pc" src="./images/AdobeStock_59829158@2x.png" alt="アームストロングのカウチ">
+            <img src="./images/AdobeStock_59829158.png" alt="アームストロングのカウチ"
+            srcset="./images/AdobeStock_59829158@2x.png 572w, ./images/AdobeStock_59829158.png 286w"
+            sizes="(min-width:768px)572px, 286px">
             <P>アームストロングのカウチ入荷</p>
         </section>
         <section>
-            <img class="sp" src="./images/AdobeStock_74141361.png" alt="アームストロングのチェア">
-            <img class="pc" src="./images/AdobeStock_74141361@2x.png" alt="アームストロングのチェア">
+            <img class="sp" src="./images/AdobeStock_74141361.png" alt="アームストロングのチェア"
+            srcset="./images/AdobeStock_74141361@2x.png 572w, ./images/AdobeStock_74141361.png 286w"
+            sizes="(min-width:768px) 572px, 286px">
             <P>アームストロングのチェア入荷</p>
         </section>
         <section>
-            <img class="sp" src="./images/AdobeStock_221963447.png" alt="アームストロングのデスク">
-            <img class="pc" src="./images/AdobeStock_221963447@2x.png" alt="アームストロングのデスク">
+            <img class="sp" src="./images/AdobeStock_221963447.png" alt="アームストロングのデスク"
+            srcset="./images/AdobeStock_221963447@2x.png 572w, ./images/AdobeStock_221963447.png 286w"
+            sizes="(min-width:768px) 572px, 286px">
             <P>アームストロングのデスク入荷</p>
         </section>
       </div>

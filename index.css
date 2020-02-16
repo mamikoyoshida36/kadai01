@@ -9,8 +9,10 @@ body{
   position:relative;
   width:100%;
   height:100%;
-  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
   color:#3B3B3B;
+}
+a{
+  text-decoration:none;
 }
 header{
   position:absolute;
@@ -33,7 +35,6 @@ h1{
   color:#FFFFFF;
   text-align:center;
   line-height:1;
-  font-weight:500;
 }
 h2{
   font-size:25px;
@@ -107,7 +108,6 @@ h2{
 #style h2{
   margin-top:140px;
   margin-bottom:30px;
-  font-family: 'Noto Serif JP', serif;
 }
 #style img{
   display:block;
@@ -143,7 +143,6 @@ h2{
 #news h2{
   margin-top:140px;
   margin-bottom:85px;
-  font-weight:100;
 }
 #news section{
   position:relative;
@@ -177,16 +176,11 @@ h2{
   align-items:center;
   font-size:4.5vw;
   color:#FFF;
-  font-family: 'Noto Serif JP', serif;
-  font-weight:600;
 }
 #news > p{
   position:static;
   font-size:21px;
   color:#3B3B3B;
-  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
-  font-weight:100;
-
 }
 #contact{
   padding-bottom:454px;
@@ -209,7 +203,6 @@ h2{
   border:0.5px solid #707070;
   border-radius:11px;
   font-size:14px;
-  font-family: 'Noto Serif JP', serif;
 }
 #contact form textarea{
   width:100%;
@@ -218,7 +211,6 @@ h2{
   border:0.5px solid #707070;
   border-radius:11px;
   font-size:14px;
-  font-family: 'Noto Serif JP', serif;
 }
 #contact form input[type="submit"]{
   display:block;
@@ -232,9 +224,9 @@ h2{
   background-color:#D1D1D1;
   font-size:18px;
   text-align:center;
-  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
-  font-weight:300;
-
+}
+#qanda{
+  display:none;
 }
 footer{
   position:absolute;
@@ -261,12 +253,91 @@ footer p{
 footer nav ul{
   display:none;
 }
+@media screen and (max-width:767px){
+  .globalNav {
+    position:absolute;
+    top: -244px;
+    width:100%;
+    height:244px;
+    background-color:#918F89;
+    opacity:0.9;
+    transition: all .6s;
+    z-index:3;
+  }
+  .hamburger{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 58px; /* クリックしやすいようにちゃんと幅を指定する */
+    height: 55px; /* クリックしやすいようにちゃんと高さを指定する */
+    cursor: pointer;
+    z-index:4;
+  }
+  .globalNavItem a {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80px;
+    padding: 8px 0;
+    color:#FFFFFF;
+  }
+  .globalNavItem:not(:last-of-type) a{
+    border-bottom: 0.5px solid #FFFFFF;
+  }
+  .hamburgerLine{
+    position: absolute;
+    left: 0px;
+    width: 36px;
+    height: 1px;
+    background-color: #FFFFFF;
+    transition: all .6s;
+  }
+  .hamburgerLine1 {
+    top: 14px;
+  }
+  .hamburgerLine2 {
+    top: 24px;
+  }
+  .hamburgerLine3 {
+    top: 34px;
+  }
+  /* 表示された時用のCSS */
+  .navOpen .globalNav {
+    top: 55px;
+  }
+  .blackBg {
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+  .navOpen .blackBg {
+    visibility: visible;
+  }
+  .navOpen .hamburgerLine1 {
+    transform:translateY(10px) rotate(45deg);
+  }
+  .navOpen .hamburgerLine2 {
+    width: 0;
+    left: 200%;
+    transform: translateY(10px);
+  }
+  .navOpen .hamburgerLine3 {
+    transform:translateY(-10px) rotate(-45deg);
+  }
+}
 
-
-
-@media screen and (min-width: 768px){
+@media screen and (min-width:768px){
   body{
     width:100%;
+  }
+  a{
+    color:#918F89;
   }
   header{
       width:100%;
@@ -304,7 +375,6 @@ footer nav ul{
     background-image:url("./images/AdobeStock_199226712_2.png");
     background-size:contain;
     padding-top:57.890625%;
-
   }
   #intro p{
     position:absolute;
@@ -400,7 +470,11 @@ footer nav ul{
   }
   #news > p{
     margin-top:39px;
+    font-size:21px;
   }
+  #news #arrow{
+    display:none;
+}
   #contact h2{
     margin-top:221px;
     margin-bottom:60px;
@@ -425,6 +499,9 @@ footer nav ul{
   }
   footer{
     height:284px;
+  }
+  footer a{
+    color:#FFFFFF;
   }
   footer h1{
     top:116px;

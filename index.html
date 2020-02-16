@@ -9,29 +9,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   <link rel="stylesheet" href="index.css">
- <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+JP:100,300,400,500,700|Noto+Serif+JP:400,600&display=swap" rel="stylesheet">
 <title>HTML CSS</title>
+
 </head>
 <body>
   <header>
     <h1>HTML CSS</h1>
-    <span></span>
-    <span></span>
-    <span></span>
-    <nav>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="">Q&A</a></li>
-      </ul>
-    </nav>
+    <nav class="globalNav">
+        <ul class="globalNavList">
+          <li class="globalNavItem"><a href="#">About</a></li>
+          <li class="globalNavItem"><a href="#">News</a></li>
+          <li class="globalNavItem"><a href="#">Q&A</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="jsHamburger">
+        <span class="hamburgerLine hamburgerLine1"></span>
+        <span class="hamburgerLine hamburgerLine2"></span>
+        <span class="hamburgerLine hamburgerLine3"></span>
+      </div>
+<div class="blackBg" id="jsBlackBg"></div>
   </header>
   <main>
     <section id="intro">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <p>We propose a life.</p>
+      <div id="introP">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <p>We propose a life.</p>
+      </div>
     </section>
 
     <section id="teian">
@@ -83,17 +88,40 @@
         <input type="submit" value="Send">
       </form>
     </section>
+
+    <section id="qanda">
+      <h2>Q&A</h2>
+      <section>
+        <h3>よくある質問</h3>
+        <p>家具の取り置きは可能でしょうか</p>
+        <p>可能です。取り置き期間は最大で３週間です。</P>
+
+        <p>家具の取り置きは可能でしょうか</p>
+        <p>可能です。取り置き期間は最大で３週間です。</P>
+
+        <p>家具の取り置きは可能でしょうか</p>
+        <p>可能です。取り置き期間は最大で３週間です。</P>
+
+        <p>家具の取り置きは可能でしょうか</p>
+        <p>可能です。取り置き期間は最大で３週間です。</P>
+
+        <p>家具の取り置きは可能でしょうか</p>
+        <p>可能です。取り置き期間は最大で３週間です。</P>
+      </section>
+    </section>
+
 </main>
 <footer>
   <h1>HTML CSS</h1>
   <p>@HTMLCSS.code</p>
   <nav>
     <ul>
-      <li>About</li>
-      <li>News</li>
-      <li>Q&A</li>
+      <li><a href="#">About</li>
+      <li><a href="#">News</li>
+      <li><a href="#">Q&A</li>
     </ul>
   </nav>
 </footer>
+<script src="index.js"></script>
 </body>
 </html>
